@@ -8,3 +8,6 @@ echo "a=$a b=$b c=$c"
 
 result_1=$(( ($a + $b) * $c))
 echo "a+b*c $result_1"
+
+result_2=$(($a * $b + $c))
+echo "a*b+c $result_2"
