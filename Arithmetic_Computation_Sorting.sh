@@ -14,3 +14,6 @@ echo "a*b+c $result_2"
 
 result_3=$(( (($c + $a) / $b) | bc ))
 echo "c+a/b $result_3"
+
+result_4=$(( (($a % $b) + $c) | bc ))
+echo "a%b+c $result_4"
