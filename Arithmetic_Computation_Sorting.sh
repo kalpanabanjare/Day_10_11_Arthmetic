@@ -30,4 +30,4 @@ echo "result[333]="${result[333]}
 result[444]=$((result_4))
 echo "result[444]="${result[444]}
 
-
+echo "value of computation" ${result[@]}
