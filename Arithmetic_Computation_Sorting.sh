@@ -38,3 +38,18 @@ do
 done
 echo "Array = "${arr[@]}
 
+for ((m = 0; m<4; m++))
+do
+   for((n = 0; n<4-m-1; n++))
+   do
+      if [ $((${arr[n]})) -lt $((${arr[$((n+1))]})) ]
+      then
+      #SWAPPING
+            	temp=${arr[n]}
+            	arr[$n]=${arr[$((n+1))]}
+            	arr[$((n+1))]=$temp
+      fi
+  done
+done
+
+echo "Descending Order : "${arr[*]}
