@@ -18,16 +18,23 @@ echo "c+a/b $result_3"
 result_4=$(( (($a % $b) + $c) | bc ))
 echo "a%b+c $result_4"
 
-result[111]=$((result_1))
-echo "result[111]="${result[111]}
+result[1]=$((result_1))
+echo "result[1]="${result[1]}
 
-result[222]=$((result_2))
-echo "result[222]="${result[222]}
+result[2]=$((result_2))
+echo "result[2]="${result[2]}
 
-result[333]=$((result_3))
-echo "result[333]="${result[333]}
+result[3]=$((result_3))
+echo "result[3]="${result[3]}
 
-result[444]=$((result_4))
-echo "result[444]="${result[444]}
+result[4]=$((result_4))
+echo "result[4]="${result[4]}
 
-echo "value of computation" ${result[@]}
+echo "Dictionary" ${result[@]}
+
+for (( j=1; j<5; j++ ))
+do
+    arr[j]=$(( ${result[$j]} ))
+done
+echo "Array = "${arr[@]}
+
